@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   const date = new Date();
-  const today = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full",
-    timeStyle: "long",
+  const today = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'full',
+    timeStyle: 'long',
   }).format(date);
 
   const content = (
@@ -18,7 +18,15 @@ const Welcome = () => {
       </p>
 
       <p>
+        <Link to="/dash/notes/new">Add a new note</Link>
+      </p>
+
+      <p>
         <Link to="/dash/users">View User Settings</Link>
+      </p>
+
+      <p>
+        <Link to="/dash/users/new">Add a new user</Link>
       </p>
     </section>
   );
